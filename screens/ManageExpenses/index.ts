@@ -1,5 +1,3 @@
-const ManageExpenses = () => {
-
-};
+const ManageExpenses = () => {};
 
 export default ManageExpenses;

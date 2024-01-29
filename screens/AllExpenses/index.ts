@@ -1,5 +1,3 @@
-const AllExpenses = () => {
-
-};
+const AllExpenses = () => {};
 
 export default AllExpenses;
