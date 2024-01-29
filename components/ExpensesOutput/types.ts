@@ -6,11 +6,15 @@ export type Expense = {
 };
 
 export type ExpensesOutputProps = {
-  expenses: Expense[];
+  // expenses: Expense[];
   expensesPeriod: string;
 };
 
 export type ExpensesSummaryProps = {
-  expenses: ExpensesOutputProps['expenses'];
+  expenses: Expense[];
   periodName: ExpensesOutputProps['expensesPeriod'];
+};
+
+export type ExpensesListProps = {
+  expenses: Expense[];
 };

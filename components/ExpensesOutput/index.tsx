@@ -33,13 +33,13 @@ const DUMMY_EXPENSES: Expense[] = [
 ];
 
 const ExpensesOutput: React.FC<ExpensesOutputProps> = ({
-  expenses,
+  //   expenses,
   expensesPeriod,
 }) => {
   return (
     <View>
       <ExpensesSummary expenses={DUMMY_EXPENSES} periodName={expensesPeriod} />
-      <ExpensesList />
+      <ExpensesList expenses={DUMMY_EXPENSES} />
     </View>
   );
 };
