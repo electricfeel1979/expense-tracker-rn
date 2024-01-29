@@ -10,11 +10,6 @@ import {StatusBar} from 'expo-status-bar';
 
 import {AllExpenses, ManageExpenses, RecentExpenses} from './screens';
 
-type BottomTabOptionsParams = {
-  color: keyof typeof GlobalStyles.colors;
-  size: number;
-};
-
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
 
