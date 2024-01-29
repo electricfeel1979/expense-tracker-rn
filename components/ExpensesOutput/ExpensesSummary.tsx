@@ -1,6 +1,7 @@
 import {Text, View} from 'react-native';
 
 import {ExpensesSummaryProps} from './types';
+import {styles} from './styles';
 
 const ExpensesSummary: React.FC<ExpensesSummaryProps> = props => {
   const {expenses, periodName} = props;
@@ -10,9 +11,9 @@ const ExpensesSummary: React.FC<ExpensesSummaryProps> = props => {
   }, 0);
 
   return (
-    <View>
-      <Text>{periodName}</Text>
-      <Text>{expensesSum}</Text>
+    <View style={styles.expensesSummaryContainer}>
+      <Text style={styles.period}>{periodName}</Text>
+      <Text style={styles.sum}>{expensesSum}</Text>
     </View>
   );
 };

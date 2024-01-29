@@ -4,6 +4,7 @@ import {View} from 'react-native';
 import ExpensesList from './ExpensesList';
 import ExpensesSummary from './ExpensesSummary';
 import {Expense, ExpensesOutputProps} from './types';
+import {styles} from './styles';
 
 const DUMMY_EXPENSES: Expense[] = [
   {
@@ -37,7 +38,7 @@ const ExpensesOutput: React.FC<ExpensesOutputProps> = ({
   expensesPeriod,
 }) => {
   return (
-    <View>
+    <View style={styles.expensesOutputContainer}>
       <ExpensesSummary expenses={DUMMY_EXPENSES} periodName={expensesPeriod} />
       <ExpensesList expenses={DUMMY_EXPENSES} />
     </View>
