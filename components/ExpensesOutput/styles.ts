@@ -56,6 +56,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 4,
     borderRadius: 4,
+    minWidth: 80,
   },
   amount: {
     color: GlobalStyles.colors.primary500,

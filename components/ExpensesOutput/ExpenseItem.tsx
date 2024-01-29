@@ -1,5 +1,6 @@
 import React from 'react';
 import {Pressable, Text, View} from 'react-native';
+import {getFormattedDate} from 'utils/date';
 
 import {styles} from './styles';
 import {ExpenseItemProps} from './types';
@@ -13,7 +14,7 @@ const ExpenseItem: React.FC<ExpenseItemProps> = props => {
           <Text style={[styles.textBase, styles.description]}>
             {description}
           </Text>
-          <Text style={[styles.textBase]}>{date.toDateString()}</Text>
+          <Text style={[styles.textBase]}>{getFormattedDate(date)}</Text>
         </View>
         <View style={styles.amountContainer}>
           <Text style={[styles.textBase, styles.amount]}>
