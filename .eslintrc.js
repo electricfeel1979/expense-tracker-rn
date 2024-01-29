@@ -8,7 +8,6 @@ module.exports = {
     'universe/native',
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
   ],
@@ -33,13 +32,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    '@typescript-eslint',
-    'react',
-    'react-hooks',
-    'unused-imports',
-    'simple-import-sort',
-  ],
+  plugins: ['@typescript-eslint', 'react', 'react-hooks', 'unused-imports'],
   rules: {
     'linebreak-style': ['error', 'unix'],
     semi: ['error', 'always'],
@@ -48,11 +41,5 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react/prop-types': 'off',
     'prettier/prettier': 'error',
-    'simple-import-sort/imports': [
-      'error',
-      {
-        groups: [['^react'], ['^antd'], ['^@?\\w'], ['@/(.*)'], ['^[./]']],
-      },
-    ],
   },
 };
