@@ -18,3 +18,5 @@ export type ExpensesSummaryProps = {
 export type ExpensesListProps = {
   expenses: Expense[];
 };
+
+export type ExpenseItemProps = Expense;

@@ -1,9 +1,10 @@
-import {FlatList, FlatListProps, Text} from 'react-native';
+import {FlatList, FlatListProps} from 'react-native';
 
+import ExpenseItem from './ExpenseItem';
 import {Expense, ExpensesListProps} from './types';
 
 const renderExpenseItem: FlatListProps<Expense>['renderItem'] = itemData => {
-  return <Text>{itemData.item.description}</Text>;
+  return <ExpenseItem {...itemData.item} />;
 };
 
 const ExpensesList: React.FC<ExpensesListProps> = props => {

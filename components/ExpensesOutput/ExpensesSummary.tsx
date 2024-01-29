@@ -1,7 +1,7 @@
 import {Text, View} from 'react-native';
 
-import {ExpensesSummaryProps} from './types';
 import {styles} from './styles';
+import {ExpensesSummaryProps} from './types';
 
 const ExpensesSummary: React.FC<ExpensesSummaryProps> = props => {
   const {expenses, periodName} = props;
