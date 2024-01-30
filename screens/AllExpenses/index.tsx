@@ -2,11 +2,7 @@ import {ExpensesOuput} from 'components';
 
 import {AllExpensesProps} from './types';
 
-// import {RecentExpensesProps} from './types';
-
-const AllExpenses: React.FC<AllExpensesProps> = props => {
-  // const {expenses} = props;
-
+const AllExpenses: React.FC<AllExpensesProps> = () => {
   return <ExpensesOuput expensesPeriod="Total" />;
 };
 

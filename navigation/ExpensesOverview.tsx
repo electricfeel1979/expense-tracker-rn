@@ -3,6 +3,7 @@ import {
   createBottomTabNavigator,
   BottomTabNavigationOptions,
 } from '@react-navigation/bottom-tabs';
+import {IconButton} from 'components/UI';
 import {GlobalStyles} from 'constant/styles';
 
 import {AllExpenses, RecentExpenses} from '../screens';
@@ -10,30 +11,21 @@ import {AllExpenses, RecentExpenses} from '../screens';
 const BottomTabs = createBottomTabNavigator();
 
 const ExpensesOverview = () => {
-  const screenOptions = {
-    headerStyle: {backgroundColor: GlobalStyles.colors.primary500},
-    headerTintColor: GlobalStyles.colors.light,
-    tabBarStyle: {
-      backgroundColor: GlobalStyles.colors.primary500,
-    },
-    tabBarActiveTintColor: GlobalStyles.colors.accent500,
-  };
-
   const recentExpensestabBarIcon: BottomTabNavigationOptions['tabBarIcon'] = ({
     color,
     size,
   }) => <Ionicons name="hourglass" size={size} color={color} />;
-
-  const allExpensestabBarIcon: BottomTabNavigationOptions['tabBarIcon'] = ({
-    color,
-    size,
-  }) => <Ionicons name="calendar" size={size} color={color} />;
 
   const recentExpensesOptions: BottomTabNavigationOptions = {
     title: 'Recent Expenses',
     tabBarLabel: 'Recent',
     tabBarIcon: recentExpensestabBarIcon,
   };
+
+  const allExpensestabBarIcon: BottomTabNavigationOptions['tabBarIcon'] = ({
+    color,
+    size,
+  }) => <Ionicons name="calendar" size={size} color={color} />;
 
   const allExpensesOptions: BottomTabNavigationOptions = {
     title: 'All Expenses',
@@ -42,7 +34,25 @@ const ExpensesOverview = () => {
   };
 
   return (
-    <BottomTabs.Navigator screenOptions={screenOptions}>
+    <BottomTabs.Navigator
+      screenOptions={({navigation}) => ({
+        headerStyle: {backgroundColor: GlobalStyles.colors.primary500},
+        headerTintColor: GlobalStyles.colors.light,
+        tabBarStyle: {
+          backgroundColor: GlobalStyles.colors.primary500,
+        },
+        tabBarActiveTintColor: GlobalStyles.colors.accent500,
+        headerRight: () => {
+          return (
+            <IconButton
+              icon="add"
+              size={24}
+              color={GlobalStyles.colors.light}
+              onPress={() => navigation.navigate('ManageExpense')}
+            />
+          );
+        },
+      })}>
       <BottomTabs.Screen
         name="RecentExpenses"
         component={RecentExpenses}
