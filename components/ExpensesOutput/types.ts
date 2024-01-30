@@ -1,9 +1,4 @@
-export type Expense = {
-  id: string;
-  description: string;
-  amount: number;
-  date: Date;
-};
+import {Expense} from '../../store/expenses/types';
 
 export type ExpensesOutputProps = {
   // expenses: Expense[];

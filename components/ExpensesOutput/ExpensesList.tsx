@@ -1,7 +1,8 @@
 import {FlatList, FlatListProps} from 'react-native';
+import {Expense} from 'store/expenses/types';
 
 import ExpenseItem from './ExpenseItem';
-import {Expense, ExpensesListProps} from './types';
+import {ExpensesListProps} from './types';
 
 const renderExpenseItem: FlatListProps<Expense>['renderItem'] = itemData => {
   return <ExpenseItem {...itemData.item} />;

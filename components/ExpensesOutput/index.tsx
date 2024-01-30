@@ -3,7 +3,7 @@ import {View} from 'react-native';
 
 import ExpensesList from './ExpensesList';
 import ExpensesSummary from './ExpensesSummary';
-import {DUMMY_EXPENSES} from './mock';
+import {DUMMY_EXPENSES} from '../../store/expenses/mock';
 import {styles} from './styles';
 import {ExpensesOutputProps} from './types';
 
