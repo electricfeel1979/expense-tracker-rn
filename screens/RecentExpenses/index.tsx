@@ -1,4 +1,4 @@
-import {ExpensesOuput} from 'components';
+import {ExpensesOutput} from 'components';
 import {useContext} from 'react';
 import {ExpensesContext} from 'store';
 import {getDateMinusDays} from 'utils/date';
@@ -18,7 +18,11 @@ const RecentExpenses: React.FC<RecentExpensesProps> = props => {
   });
 
   return (
-    <ExpensesOuput expenses={recentExpenses} expensesPeriod="Last 7 days" />
+    <ExpensesOutput
+      expenses={recentExpenses}
+      expensesPeriod="Last 7 days"
+      fallbackText="No expenses registered for the last 7 days."
+    />
   );
 };
 

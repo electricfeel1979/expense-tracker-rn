@@ -65,4 +65,11 @@ export const styles = StyleSheet.create({
   pressed: {
     opacity: 0.75,
   },
+  fallBackText: {
+    color: GlobalStyles.colors.light,
+    padding: 10,
+    alignSelf: 'center',
+    fontSize: 16,
+    marginTop: 20,
+  },
 });

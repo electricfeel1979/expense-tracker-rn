@@ -1,4 +1,4 @@
-import {ExpensesOuput} from 'components';
+import {ExpensesOutput} from 'components';
 import {useContext} from 'react';
 import {ExpensesContext} from 'store';
 
@@ -9,8 +9,13 @@ const AllExpenses: React.FC<AllExpensesProps> = () => {
     expensesState: {expenses},
   } = useContext(ExpensesContext);
 
-  // debugger;
-  return <ExpensesOuput expenses={expenses} expensesPeriod="Total" />;
+  return (
+    <ExpensesOutput
+      expenses={expenses}
+      expensesPeriod="Total"
+      fallbackText="No registered expenses found!"
+    />
+  );
 };
 
 export default AllExpenses;

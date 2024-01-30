@@ -3,6 +3,7 @@ import {Expense} from '../../store/expenses/types';
 export type ExpensesOutputProps = {
   expenses: Expense[];
   expensesPeriod: string;
+  fallbackText: string;
 };
 
 export type ExpensesSummaryProps = {

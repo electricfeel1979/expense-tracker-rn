@@ -1,1 +1,1 @@
-export {default as ExpensesOuput} from './ExpensesOutput';
+export {default as ExpensesOutput} from './ExpensesOutput';
