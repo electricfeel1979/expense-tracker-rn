@@ -18,13 +18,13 @@ const ManageExpenses: React.FC<ManageExpensesProps> = ({route, navigation}) => {
   }, [isEditing, navigation]);
 
   const deleteExpenseHandler = () => {
-    alert(1);
+    navigation.goBack();
   };
   const cancelHandler = () => {
-    alert(1);
+    navigation.goBack();
   };
   const confirmHandler = () => {
-    alert(1);
+    navigation.goBack();
   };
 
   return (
