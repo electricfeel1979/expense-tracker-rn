@@ -1,6 +1,7 @@
 import {createContext, useReducer} from 'react';
 
 import {addExpense, deleteExpense, updateExpense} from './actions';
+import {DUMMY_EXPENSES} from './mock';
 import {expensesReducer} from './reducer';
 import {
   ExpensesState,
@@ -9,7 +10,7 @@ import {
 } from './types';
 
 const EXPENSES_INITIAL_STATE: ExpensesState = {
-  expenses: [],
+  expenses: DUMMY_EXPENSES,
 };
 
 export const ExpensesContext = createContext<ExpensesContextProps>({
@@ -41,6 +42,8 @@ export const ExpensesContextProvider: React.FC<
     deleteExpense: deleteExpenseValue,
     updateExpense: updateExpenseValue,
   };
+
+  // debugger;
 
   return (
     <ExpensesContext.Provider value={value}>

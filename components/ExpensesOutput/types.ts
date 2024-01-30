@@ -1,7 +1,7 @@
 import {Expense} from '../../store/expenses/types';
 
 export type ExpensesOutputProps = {
-  // expenses: Expense[];
+  expenses: Expense[];
   expensesPeriod: string;
 };
 
